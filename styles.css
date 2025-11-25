@@ -1,73 +1,129 @@
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  margin: auto;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-caption {
-  caption-side: bottom;
-  padding: 10px;
-  font-weight: bold;
-}
-
-thead,
-tfoot {
-  background-color: rgb(228 240 245);
-}
-
-th,
-td {
-  border: 1px solid rgb(160 160 160);
-  padding: 8px 10px;
-}
-
-td:last-of-type {
-  text-align: center;
-}
-
-tbody > tr:nth-of-type(even) {
-  background-color: rgb(237 238 242);
-}
-
-tfoot th {
-  text-align: right;
-}
-
-tfoot td {
-  font-weight: bold;
-}
-
-p {
-    color: rgb(0, 0, 0);
-    /*border: solid;*/
-}
-
-.pim {
-    color: rgb(0, 0, 0);
-}
-
-.skill {
-    color: #000;
-}
-
-img {
-  border-radius: 50%;
-  width: 300px;
-}
 body {
+    font-family: 'Noto Sans Thai', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container-minimal {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
     text-align: center;
 }
 
-.noborder {
-    border-style: none;
+.profile-header-minimal {
+    margin-bottom: 30px;
 }
 
-hr {
-    /*background-color: white;*/
-  border-style: dotted none none;
-  /*height: 2px; */
-  width: 30%;
+.profile-pic-minimal {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
 }
+
+h1 {
+    font-size: 2.5em;
+    color: #000;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.description a {
+    color: #0000ff;
+    text-decoration: underline;
+}
+.description a:hover {
+    color: #0000cc;
+}
+
+.section-title-minimal {
+    font-size: 1.6em;
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    display: inline-block;
+}
+
+.section-block-minimal {
+    margin-bottom: 30px;
+}
+
+.section-divider {
+    height: 1px;
+    background-color: #eee;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.employment-table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.employment-table th, .employment-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.employment-table th {
+    background-color: #f2f2f2;
+    font-weight: 500;
+    color: #333;
+}
+
+.skill-item-minimal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #333;
+}
+
+.skill-name {
+    width: 100px;
+    text-align: right;
+    margin-right: 15px;
+    font-weight: 400;
+}
+
+.star-rating {
+    display: flex;
+    font-size: 1.2em;
+    color: #ffd700;
+}
+
+.star.empty {
+    color: #ccc;
+}
+
+.section-block-minimal p {
