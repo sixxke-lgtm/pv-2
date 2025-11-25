@@ -1,3 +1,4 @@
+/* รีเซ็ตค่าเริ่มต้น */
 * {
     margin: 0;
     padding: 0;
@@ -5,125 +6,225 @@
 }
 
 body {
-    font-family: 'Noto Sans Thai', sans-serif;
+    font-family: 'Prompt', sans-serif; /* ใช้ฟอนต์ Prompt เป็นหลัก */
     line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+    color: #333; /* สีข้อความเข้ม */
+    background-color: #f8f8f8; /* พื้นหลังสีเทาอ่อน */
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 25px; /* เพิ่ม padding โดยรอบ */
     min-height: 100vh;
 }
 
 .container-minimal {
-    max-width: 700px;
+    max-width: 750px; /* เพิ่มความกว้างเล็กน้อย */
     width: 100%;
-    background-color: #fff;
-    padding: 40px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
+    background-color: #ffffff; /* พื้นหลังสีขาวสะอาด */
+    padding: 50px; /* เพิ่ม padding ในคอนเทนเนอร์ */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* เงาที่ชัดเจนขึ้นเล็กน้อย */
+    border-radius: 10px; /* ขอบโค้งมนขึ้น */
     text-align: center;
 }
 
+/* ส่วนหัวโปรไฟล์ */
 .profile-header-minimal {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* เส้นแบ่งใต้ส่วนหัว */
 }
 
 .profile-pic-minimal {
-    width: 150px;
-    height: 150px;
+    width: 160px; /* ขนาดรูปใหญ่ขึ้นเล็กน้อย */
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
-    border: 2px solid #ddd;
+    margin-bottom: 25px;
+    border: 4px solid #34495e; /* ขอบสีกรมท่าเข้ม */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้รูป */
 }
 
 h1 {
-    font-size: 2.5em;
-    color: #000;
-    margin-bottom: 10px;
+    font-size: 2.8em; /* ขนาดชื่อใหญ่ขึ้น */
+    color: #2c3e50; /* สีกรมท่าเข้มสำหรับชื่อ */
+    margin-bottom: 8px;
     font-weight: 700;
+    letter-spacing: 1px; /* เพิ่มระยะห่างตัวอักษร */
 }
 
 .description {
-    font-size: 1em;
+    font-size: 1.05em;
     color: #555;
     margin-bottom: 15px;
+    line-height: 1.8;
 }
 
 .description a {
-    color: #0000ff;
-    text-decoration: underline;
+    color: #e67e22; /* สีส้มอิฐสำหรับลิงก์ */
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 .description a:hover {
-    color: #0000cc;
+    color: #d35400; /* สีส้มเข้มขึ้นเมื่อ hover */
+    text-decoration: underline;
 }
 
+/* หัวข้อส่วนต่างๆ */
 .section-title-minimal {
-    font-size: 1.6em;
-    color: #000;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-weight: 500;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #eee;
+    font-size: 1.8em; /* ขนาดหัวข้อใหญ่ขึ้น */
+    color: #2c3e50; /* สีกรมท่าเข้มสำหรับหัวข้อ */
+    margin-top: 40px; /* ระยะห่างจากส่วนบน */
+    margin-bottom: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e67e22; /* เส้นใต้หนาขึ้นและเป็นสีส้มอิฐ */
     display: inline-block;
+    letter-spacing: 0.5px;
 }
 
 .section-block-minimal {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
+/* เส้นแบ่งส่วน */
 .section-divider {
     height: 1px;
-    background-color: #eee;
-    width: 80%;
-    margin: 30px auto;
+    background-color: #ddd; /* สีเทาอ่อน */
+    width: 70%; /* กว้างขึ้นเล็กน้อย */
+    margin: 40px auto;
 }
 
+/* ตารางประวัติการทำงาน */
 .employment-table {
-    width: 60%;
-    margin: 20px auto;
+    width: 70%; /* กว้างขึ้น */
+    margin: 25px auto;
     border-collapse: collapse;
-    font-size: 0.95em;
+    font-size: 1em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* เพิ่มเงาให้ตาราง */
 }
 
 .employment-table th, .employment-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
+    border: 1px solid #e0e0e0; /* เส้นขอบตารางที่ละเอียดขึ้น */
+    padding: 12px 15px; /* เพิ่ม padding */
     text-align: center;
 }
 
 .employment-table th {
-    background-color: #f2f2f2;
-    font-weight: 500;
-    color: #333;
+    background-color: #f2f4f6; /* สีพื้นหลังหัวตาราง */
+    font-weight: 600;
+    color: #34495e; /* สีกรมท่าอ่อนสำหรับหัวตาราง */
+}
+.employment-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* สีสลับแถว */
 }
 
+/* ส่วน Skills (ดาว) */
 .skill-item-minimal {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8px;
-    font-size: 1em;
+    margin-bottom: 10px; /* ระยะห่างระหว่าง skill items */
+    font-size: 1.05em;
     color: #333;
 }
 
 .skill-name {
-    width: 100px;
+    width: 120px; /* กำหนดความกว้างให้เท่ากันเพื่อจัดเรียง */
     text-align: right;
-    margin-right: 15px;
-    font-weight: 400;
+    margin-right: 20px;
+    font-weight: 500;
+    color: #444;
 }
 
 .star-rating {
     display: flex;
-    font-size: 1.2em;
-    color: #ffd700;
+    font-size: 1.4em; /* ขนาดดาวใหญ่ขึ้น */
+    color: #FFC107; /* สีเหลืองทองที่สดใส */
 }
 
 .star.empty {
-    color: #ccc;
+    color: #e0e0e0; /* สีเทาอ่อนสำหรับดาวที่ไม่เต็ม */
 }
 
+/* ส่วนประสบการณ์การทำงาน (ข้อความ) */
 .section-block-minimal p {
+    font-size: 1em;
+    color: #444;
+    margin-bottom: 8px;
+    line-height: 1.7;
+    text-align: center; /* จัดกึ่งกลาง */
+}
+
+/* ส่วน Contact */
+.section-block-minimal p a {
+    color: #e67e22; /* สีส้มอิฐสำหรับลิงก์ */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.section-block-minimal p a:hover {
+    color: #d35400;
+    text-decoration: underline;
+}
+
+/* Responsive สำหรับหน้าจอเล็ก */
+@media (max-width: 768px) {
+    .container-minimal {
+        padding: 30px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    .section-title-minimal {
+        font-size: 1.5em;
+    }
+    .profile-pic-minimal {
+        width: 130px;
+        height: 130px;
+    }
+    .employment-table {
+        width: 95%;
+    }
+    .employment-table th, .employment-table td {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+    .skill-item-minimal {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-name {
+        width: auto;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .star-rating {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-minimal {
+        padding: 20px;
+        border-radius: 5px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    .section-title-minimal {
+        font-size: 1.3em;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .profile-pic-minimal {
+        width: 100px;
+        height: 100px;
+    }
+    .description {
+        font-size: 0.9em;
+    }
+    .section-block-minimal p {
+        font-size: 0.9em;
+    }
+}
