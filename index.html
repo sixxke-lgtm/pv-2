@@ -8,6 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    
+    <header class="navbar-minimal">
+        <div class="logo-name">Phathadon Resume</div>
+        <nav class="nav-links-container">
+            <ul class="nav-list">
+                <li><a href="#about" class="nav-link">ประวัติ</a></li>
+                <li><a href="#history" class="nav-link">ประวัติงาน</a></li>
+                <li><a href="#skills" class="nav-link">ทักษะ</a></li>
+                <li><a href="#experience" class="nav-link">ประสบการณ์</a></li>
+                <li><a href="#contact" class="nav-link">ติดต่อ</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+    </header>
+
     <div class="container-minimal">
         <div class="profile-header-minimal">
             <img src="Mao.jpg" alt="Phathadon Meemeng Profile Picture" class="profile-pic-minimal">
@@ -17,21 +32,22 @@
                 คณะวิศวกรรมและเทคโนโลยี<br>
                 <a href="#" target="_blank">สถาบันการจัดการปัญญาภิวัฒน์</a>
             </p>
-            <h2 class="section-title-minimal">About Me</h2>
-<p class="summary-statement">
-    นักศึกษาเทคโนโลยีดิจิทัลฯ ที่สนใจในด้าน **3D Modeling และ Graphic Design** 
-</p>
-<div class="personal-details">
-    <p><strong>ชื่อเล่น:</strong> เม่า</p>
-    <p><strong>เกิดที่:</strong> อ.เมือง จ.ปราจีนบุรี</p>
-    <p><strong>วันเกิด:</strong> 01 มกราคม 2549 (อายุ 19 ปี)</p>
-</div>
+            
+            <h2 class="section-title-minimal" id="about">About Me</h2>
+            <p class="summary-statement">
+                นักศึกษาเทคโนโลยีดิจิทัลฯ ที่สนใจในด้าน <strong>3D Modeling และ Graphic Design</strong> 
+            </p>
+            <div class="personal-details">
+                <p><strong>ชื่อเล่น:</strong> เมา</p>
+                <p><strong>เกิดที่:</strong> อ.ปากพลี จ.นครนายก</p>
+                <p><strong>วันเกิด:</strong> 01 มีนาคม 2549 (อายุ 19 ปี)</p>
+            </div>
         </div>
 
         <div class="section-divider"></div>
 
         <section class="section-block-minimal">
-            <h2 class="section-title-minimal">ประวัติการทำงาน</h2>
+            <h2 class="section-title-minimal" id="history">ประวัติการทำงาน</h2>
             <table class="employment-table">
                 <thead>
                     <tr>
@@ -51,7 +67,7 @@
         <div class="section-divider"></div>
 
         <section class="section-block-minimal">
-            <h2 class="section-title-minimal">skills</h2>
+            <h2 class="section-title-minimal" id="skills">skills</h2>
             <div class="skill-item-minimal">
                 <span class="skill-name">English</span>
                 <span class="star-rating">
@@ -87,20 +103,35 @@
         <div class="section-divider"></div>
 
         <section class="section-block-minimal">
-            <h2 class="section-title-minimal">ประสบการณ์การทำงาน</h2>
-            <p>เคยทำงานที่บ้านช่างเเกะสลักไม้<br> รวมถึงทำงานที่ 7-11</p>
+            <h2 class="section-title-minimal" id="experience">ประสบการณ์การทำงาน</h2>
+            <p>เคยทำงานเป็นแอดมินเพจ ส่งของ แอดมินร้านขายโมเดล<br>คอยสร้างอัพเดท 3 มิติ คอยเช็คการผลิตงานให้ครบถ้วน รวมถึงทำงานที่ 7-11</p>
         </section>
 
         <div class="section-divider"></div>
 
         <section class="section-block-minimal">
-            <h2 class="section-title-minimal">ติดต่อ</h2>
+            <h2 class="section-title-minimal" id="contact">ติดต่อ</h2>
             <p>Facebook: <a href="https://www.facebook.com/KaMao.Skrc" target="_blank">KaMao Skrc</a></p>
             <p>GitHub: <a href="https://github.com/sixxke-lgtm_github" target="_blank">GitHub</a></p>
             <p>Email: <a href="mailto:Kama@gmail.com">Kama@gmail.com</a></p>
             <p>Phone: 0777777777</p>
         </section>
     </div>
+    
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinksContainer = document.querySelector('.nav-links-container');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        menuToggle.addEventListener('click', () => {
+            navLinksContainer.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinksContainer.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
-
